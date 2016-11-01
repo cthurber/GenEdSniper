@@ -3,7 +3,7 @@ from wtforms import Form, TextField, IntegerField, TextAreaField, SubmitField, R
 
 from gen_sniper import get_requirement_titles
 
-class ContactForm(Form):
+class Requirement_Lookup_Form(Form):
 
     diversity_us = BooleanField('Diversity US')
     writing_intensive = BooleanField('Writing Intensive')

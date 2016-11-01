@@ -1,18 +1,14 @@
 from flask import Flask
 from flask import render_template
-from forms import ContactForm
+from forms import Requirement_Lookup_Form
 from gen_sniper import gather_courses
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods = ['GET', 'POST'])
 def home():
-    return render_template('index.html')
-
-@app.route('/lookup', methods = ['GET', 'POST'])
-def lookup():
-    form = ContactForm()
-    return render_template('lookup.html', form=form)
+    form = Requirement_Lookup_Form()
+    return render_template('index.html', form=form)
 
 
 if __name__ == '__main__':
