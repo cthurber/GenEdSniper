@@ -22,7 +22,7 @@ def home():
         if form.breadth_arts.data: form_data.append('breadth/arts')
 
         print(form_data)
-        return render_template('selections.html', response_data=filter_on_requirements(form_data))
+        return render_template('selections.html', response_data=filter_on_requirements(form_data), form=form)
     else:
         return render_template('index.html', form=form)
 
