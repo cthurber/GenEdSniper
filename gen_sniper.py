@@ -93,10 +93,6 @@ def gather_courses(directory, term):
 
     return courses
 
-def is_slice_in_list(s,l):
-    len_s = len(s) #so we don't recompute length of s on every iteration
-    return any(s == l[i:len_s+i] for i in range(len(l) - len_s+1))
-
 def filter_on_requirements(requirements):
     course_data = gather_courses('./raw','S2017')
     results = []
@@ -111,15 +107,5 @@ def filter_on_requirements(requirements):
                 all_reqs_met = False
             iteration += 1
         if all_reqs_met == True: results.append(course_meta)
-    # for course in course_data:
-    #     all_reqs_met = False
-    #     iteration = 0
-    #     while all_reqs_met == True and iteration < len(requirements):
-    #         req = requirements[iteration]
-    #         course_meta = course_data[course]
-    #         if req in course_meta['reqs_filled'] and all_reqs_met == True:
-    #             results.append(course_meta)
-    #         else:
-    #             all_reqs_met = False
-    #         iteration += 1
+
     return results

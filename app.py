@@ -15,8 +15,11 @@ def home():
         if form.writing_intensive.data: form_data.append('writing-intensive')
         if form.humanities.data: form_data.append('breadth/humanities')
         if form.interdisc_breadth.data: form_data.append('breadth/interdisciplinary')
-        if form.natural_sci.data: form_data.append('natural-sciences')
+        if form.natural_sci.data: form_data.append('breadth/natural-science')
         if form.diversity_international.data: form_data.append('diversity-international')
+        if form.quantitative.data: form_data.append('quantitative')
+        if form.off_campus.data: form_data.append('off-campus-experience')
+        if form.breadth_arts.data: form_data.append('breadth/arts')
 
         print(form_data)
         return render_template('selections.html', response_data=filter_on_requirements(form_data))

@@ -5,9 +5,13 @@ from gen_sniper import get_requirement_titles
 
 class Requirement_Lookup_Form(Form):
 
-    diversity_us = BooleanField('Diversity US')
+    quantitative = BooleanField('Quantitative Literacy')
     writing_intensive = BooleanField('Writing Intensive')
-    interdisc_breadth = BooleanField('Interdisciplinary Breadth')
-    natural_sci = BooleanField('Natural Sciences')
-    humanities = BooleanField('Humanities')
+    off_campus = BooleanField('Off Campus Experience')
+    diversity_us = BooleanField('Diversity US')
     diversity_international = BooleanField('Diversity International')
+    natural_sci = BooleanField('Natural Sciences')
+    # Social Sciences goes here
+    humanities = BooleanField('Humanities')
+    breadth_arts = BooleanField('Breadth/Arts')
+    interdisc_breadth = BooleanField('Interdisciplinary Breadth')

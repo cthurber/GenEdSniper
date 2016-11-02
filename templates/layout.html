@@ -7,10 +7,12 @@
 
     <!-- Stylesheet imports -->
     <link href="../static/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   </head>
 
   <body role="document">
+    <script src="../static/js/vendor/jquery.min.js"></script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -22,25 +24,40 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="#">About</a></li>
-            <li role="presentation"><a href="#">Contact</a></li>
+            <!-- <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">About</a></li> -->
           </ul>
         </nav>
-        <h3 class="text-muted">Class Sniper</h3>
+        <h3 class="text-muted"><a href="/">Breadth Class Finder</a></h3>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- BreadthFinder -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3142989070014529"
+             data-ad-slot="7666489899"
+             data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
       </div>
-
-      <!-- <div class="jumbotron">
-        <h1>Jumbotron heading</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
-      </div> -->
 
       <div>
         {% block content %}
         {% endblock %}
       </div>
 
+      <div class="container">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- BreadthFinder -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3142989070014529"
+             data-ad-slot="7666489899"
+             data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
       <footer class="footer">
         <center><p>Designed in New York by <a href="http://idkcode.com">Chris Thurber</a></p></center>
       </footer>
