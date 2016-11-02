@@ -11,7 +11,7 @@ class Requirement_Lookup_Form(Form):
     diversity_us = BooleanField('Diversity US')
     diversity_international = BooleanField('Diversity International')
     natural_sci = BooleanField('Natural Sciences')
-    # Social Sciences goes here
+    social_sciences = BooleanField('Social Sciences')
     humanities = BooleanField('Humanities')
     breadth_arts = BooleanField('Breadth/Arts')
     interdisc_breadth = BooleanField('Interdisciplinary Breadth')

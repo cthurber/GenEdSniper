@@ -16,6 +16,7 @@ def home():
         if form.humanities.data: form_data.append('breadth/humanities')
         if form.interdisc_breadth.data: form_data.append('breadth/interdisciplinary')
         if form.natural_sci.data: form_data.append('breadth/natural-science')
+        if form.social_sciences.data: form_data.append('breadth/social-science')
         if form.diversity_international.data: form_data.append('diversity-international')
         if form.quantitative.data: form_data.append('quantitative')
         if form.off_campus.data: form_data.append('off-campus-experience')
