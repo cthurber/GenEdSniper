@@ -10,3 +10,4 @@ class Requirement_Lookup_Form(Form):
     interdisc_breadth = BooleanField('Interdisciplinary Breadth')
     natural_sci = BooleanField('Natural Sciences')
     humanities = BooleanField('Humanities')
+    diversity_international = BooleanField('Diversity International')

@@ -16,6 +16,7 @@ def home():
         if form.humanities.data: form_data.append('humanities')
         if form.interdisc_breadth.data: form_data.append('breadth/interdisciplinary')
         if form.natural_sci.data: form_data.append('natural-sciences')
+        if form.diversity_international.data: form_data.append('diversity-international')
 
         print(form_data)
         return render_template('selections.html', response_data=filter_on_requirements(form_data))
