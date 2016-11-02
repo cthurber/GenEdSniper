@@ -36,10 +36,12 @@ def structure_listings(directory):
     # Iterates over each HTML page in 'directory'
     for listing in os.listdir(directory):
         requirement_category = str(listing).replace('.html','')
-        listing_page = BS(open(directory+'/'+listing,'r'))
+        requirements_page = open(directory+'/'+listing,'r')
+
+        listing_page = BS(requirements_page)
         spring_table = listing_page.find_all('table')[1]
         # NEW
-        requirement_category = str(BS(requirements_page).find("title").text).replace('CLA-','')
+        requirement_category = str(listing_page.find("title").text).replace('CLA-','').lower().strip().replace(' ','-')
         raw_rows = spring_table.find_all('tr')
 
         for row in raw_rows:
@@ -90,3 +92,34 @@ def gather_courses(directory, term):
             courses[course_code]["reqs_filled"].append(listing[6])
 
     return courses
+
+def is_slice_in_list(s,l):
+    len_s = len(s) #so we don't recompute length of s on every iteration
+    return any(s == l[i:len_s+i] for i in range(len(l) - len_s+1))
+
+def filter_on_requirements(requirements):
+    course_data = gather_courses('./raw','S2017')
+    results = []
+    for course in course_data:
+        course_meta = course_data[course]
+        all_reqs_met = True
+        iteration = 0
+
+        while all_reqs_met == True and iteration < len(requirements):
+            req = requirements[iteration]
+            if req not in course_meta['reqs_filled']:
+                all_reqs_met = False
+            iteration += 1
+        if all_reqs_met == True: results.append(course_meta)
+    # for course in course_data:
+    #     all_reqs_met = False
+    #     iteration = 0
+    #     while all_reqs_met == True and iteration < len(requirements):
+    #         req = requirements[iteration]
+    #         course_meta = course_data[course]
+    #         if req in course_meta['reqs_filled'] and all_reqs_met == True:
+    #             results.append(course_meta)
+    #         else:
+    #             all_reqs_met = False
+    #         iteration += 1
+    return results
