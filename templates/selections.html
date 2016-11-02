@@ -25,13 +25,14 @@
                   <th>Title</th>
                   <th>Schedule</th>
                   <th>Professor</th>
+                  <th>Requirements Satisfied</th>
                 </tr>
               </thead>
               <tbody>
                   {% for course in response_data %}
                   <tr>
-                      <td>{{ course['code'] }}</td>
-                      <td>{{ course['title'] }}</td>
+                      <td style="width: 100px;">{{ course['code'] }} </td>
+                      <td>{{ course['title'] }} <span class="badge pull-right">{{ course['reqs_filled']|length }}</span></td>
                       <td>{{ course['schedule'] }}</td>
                       <td>{{ course['professor'] }}</td>
                       <td>
