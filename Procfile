@@ -1,1 +1,1 @@
-web: gunicorn ClassBreadth:app --log-file=-
+web: gunicorn app.py --log-file=-
