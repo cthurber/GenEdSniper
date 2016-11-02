@@ -13,7 +13,7 @@ def home():
         form_data = []
         if form.diversity_us.data: form_data.append('diversity-us')
         if form.writing_intensive.data: form_data.append('writing-intensive')
-        if form.humanities.data: form_data.append('humanities')
+        if form.humanities.data: form_data.append('breadth/humanities')
         if form.interdisc_breadth.data: form_data.append('breadth/interdisciplinary')
         if form.natural_sci.data: form_data.append('natural-sciences')
         if form.diversity_international.data: form_data.append('diversity-international')
